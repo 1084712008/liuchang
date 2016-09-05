@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>图片的操作</title>
+	<link rel="stylesheet" href="">
+	<script src='js/jquery-1.11.3.js'></script>
+	<script>
+		$(function () {
+			$('#demo').hover(function(){
+				$(this).stop().animate({
+					opacity:0.25
+				})
+				},function(){
+				$(this).stop().animate({
+					opacity:1
+				})
+				})
+			$('#d').click(function(){
+				$('#first').stop().toggle(3000);
+			})
+		})
+	</script>
+	<style>
+		#first {
+			width:100px;
+			height: 100px;
+			background-color: red;
+		}
+		button {
+			left:500px;
+			position: absolute;
+		}
+	</style>
+</head> 
+<body>
+	<button id='d'>显示隐藏</button>
+	<div id='first'></div>
+
+	<img id='demo' src="../14Day-ajax2/img/22.jpg" alt="">
+
+</body>
+</html>

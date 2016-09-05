@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            相册
+        </title>
+        <link href="" rel="stylesheet">
+            <script src="js/jquery-1.11.3.js">
+            </script>
+            <script>
+
+            //1.相册>页面9个图片
+            //2.点击图片 显示一个模态框>将某一张图片放大显示在最上面
+            //2.1显示的图片一共有9张，设置了属性position进行叠加
+            //2.1 按照代码的顺序 1,2,3  显示的顺序为3,2,1
+            //3.点击右(左)按钮,获取当前show元素下的最后一张图片A(当前显示的图片)
+            //3.1 将获取的图片A像右移动150%，将整个show标签向左边移动15%
+            //3.2 移动完成,将图片A设置为show标签下的第一个图片元素
+            //3.3 将A标签移动为原来的位置，show标签移动回原来的位置
+            //3.4 实现切换效果 (左边正好相反>大家体谅样式...加油)
+
+                $(function() {
+			var imgArr = [];
+			for(var i=1;i<10;i++){ 
+				imgArr.push("images/main/"+i+'.jpg');
+			}
+
+			$.each(imgArr,function(i,v) {
+				var img = $('<img>');
+				img.attr({src:v});
+
+				$('#show').append(img.clone());
+				$('#main').append(img);
+			})
+
+			//点击图片 显示模态框
+			$('#main img').click(function(){
+				$('#modal').fadeTo(1000,0.5 ,function(){
+					$('#show').show();
+				})
+			})
+			
+			
+		})
+            </script>
+            <style>
+                #main {
+		width:960px;
+		margin: 0 auto;
+	}
+		#main img{
+			    width: 300px;
+			    height: 225px;
+			    margin: 10px;
+		}
+		* {
+			margin:0;
+			padding: 0;
+		}
+		html,body {
+			height: 100%;
+			width: 100%;
+		}
+		#modal {
+			position:absolute;
+			width:100%;
+			height: 100%;
+			background-color: gray;
+			z-index:99;
+			display: none;
+		}
+		#show {
+			display: none;
+			position:absolute;
+			width:500px;
+			height: 400px;
+			z-index: 100;
+		}
+
+		#show img {
+			    position: absolute;
+			    width: 500px;
+			    height: 400px;
+			    z-index: 100;
+			    left: 50%;
+			    top: 100px;
+		}
+		#show button {
+			width:80px;
+			height: 150px;
+		}
+
+            </style>
+        </link>
+    </head>
+    <body>
+        <div id="modal">
+        </div>
+		<div id='show'>
+			<button id='prev'>左</button>
+			<button id='next'>右</button>
+
+
+		</div>
+
+        <div id="main">
+        </div>
+    </body>
+</html>

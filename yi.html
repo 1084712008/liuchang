@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script>
+		$(function(){
+			$('.first_level').hover(function(){
+				$(this).find('ul').stop().slideDown(1000)
+				},function(){
+					$(this).find('ul').stop().slideUp(1000)
+				})
+		})
+			/*$(function() {
+
+		$('.first_level').hover(function() {
+			//鼠标悬浮
+			//this>鼠标悬浮触发的li
+			$(this).find('ul').show();
+		},function() {
+			//鼠标离开
+			$(this).find('ul').hide();
+		})
+
+	})*/
+	</script>
+	<style>
+				
+		.first_level {
+			float: left;
+			list-style: none;
+			text-decoration: none;
+			width:100px;
+			border:1px solid #bebebe;
+			text-align: center;
+		}
+
+		.first_level ul {
+			display: none;
+		}
+	</style>
+	
+	<body>
+		<ul>
+		<li class="first_level">
+			服装
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</li>
+		<li class="first_level">
+			家电
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</li>
+		<li class="first_level">
+			母婴用品
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</li>
+	</ul>
+	</body>
+</html>

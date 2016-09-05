@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		.container {
+			width: 760px;
+			height: 300px;
+			margin:0 auto;
+		}
+		.first {
+			background: url(img1/bg1.jpg)
+		}
+		.second {
+			background: url(img1/bg2.jpg)
+		}
+		.third {
+			background: url(img1/bg3.jpg)
+		}
+		.four {
+			background: url(img1/bg4.jpg)
+		}
+		.five {
+			background: url(img1/bg5.jpg)
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			width: 760px;
+			height: 300px;
+			overflow:hidden;
+			position: relative;
+		}
+		li {
+			list-style: none;
+			text-decoration: none;
+			width: 760px;
+			height: 300px;
+		}
+		li img {
+			position: absolute;
+			display: none;
+			margin-left: -200px;
+		}
+	</style>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script>
+		$(function(){
+			$('.first').find('img:last').delay(1000).show(0).animate({marginLeft:'0px'},500);
+			$('.first').find('img:first').delay(1300).show(0).animate({marginLeft:'0px'},500);
+			setInterval(function(){
+				
+			})
+		})
+	</script>
+	</head>
+	<body>
+<div class='container'>
+		<ul>
+			<li class='first'>
+				<img src="img1/text1.png" alt="">
+				<img src="img1/con1.png" alt="">
+			</li>
+			<li class='second'>
+				<img src="img1/text2.png" alt="">
+				<img src="img1/con2.png" alt="">
+			</li>
+			<li class='third'>
+				<img src="img1/text3.png" alt="">
+				<img src="img1/con3.png" alt="">
+			</li>
+			<li class='four'>
+				<img src="img1/text4.png" alt="">
+				<img src="img1/con4.png" alt="">
+			</li>
+			<li class='five'>
+				<img src="img1/text5.png" alt="">
+				<img src="img1/con5.png" alt="">
+			</li>
+		</ul>
+	</div>
+	</body>
+</html>

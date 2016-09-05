@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		
+		<style>
+		#demo {
+			width:150px;
+			height:320px;
+			border:1px solid red;
+			padding: 0;
+			margin:0; 
+		}
+		#demo li {
+			list-style: none;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			border:1px solid #bebebe;
+			overflow: hidden;
+		}
+
+		p {
+			background-color: green;
+			border:1px solid green;
+		}
+	</style>
+	<script src="js/jquery-1.11.3.js"></script>
+			<script>
+			$(function(){
+				$('li').click(function(){
+					$(this).stop().animate({
+					  	height:'180px'
+					},800).siblings().animate({
+						height:'30px'
+					},800)
+				})
+			})
+		</script>
+
+	</head>
+	<body>
+
+		<ul id='demo'>
+		<li>服装
+			<div>
+				<p>男装</p>
+				<p>女装</p>
+				<p>童装</p>
+			</div>
+		</li>
+		<li>家电
+			<div>
+				<p>冰箱</p>
+				<p>彩电</p>
+				<p>洗衣机</p>
+			</div>
+		</li>
+		<li>电子</li>
+		<li>运动</li>
+		<li>母婴用品</li>
+	</ul>
+
+	</body>
+</html>

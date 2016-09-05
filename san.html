@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src='js/jquery-1.11.3.js'></script>
+		<script>
+			$(function(){
+				$('#demo').click(function(){
+					$('div:eq(0)').slideToggle(2000);
+				})
+			})
+		</script>
+		<style>
+			div {
+				width:800px;
+				height: 300px;
+				background-color: blue;
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+		<button id='demo'>显示切换</button>
+		<div></div>
+		<div></div>
+	</body>
+</html>

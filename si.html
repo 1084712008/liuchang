@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script>
+			$(function(){
+				$('div').hover(function(){
+					$(this).fadeTo(3000,0.5)
+				},function(){
+					$(this).fadeTo(3000,1.5)
+				})
+			})
+		</script>
+	<style>
+
+		div {
+			width:300px;
+			height: 200px;
+			background-color: red;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div></div>
+	<div></div>
+	<p>你好</p>
+</body>
+</html>
